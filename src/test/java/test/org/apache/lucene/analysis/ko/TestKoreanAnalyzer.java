@@ -13,7 +13,6 @@ public class TestKoreanAnalyzer extends TestCase {
 	public void testKoreanAnalyzer() throws Exception {
 		
 		String input = "이 규정에 특별한 규정이 있는 것을 제외하고는 법ㆍ영ㆍ규칙 또는 문화체육관광부 감사규정이 정하는 바에 따른다.";
-		//String input = "삼성전자";
 
 		KoreanAnalyzerSeunjeon a = new KoreanAnalyzerSeunjeon(true, true, true, true);
 		
