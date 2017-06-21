@@ -12,9 +12,9 @@ public class TestKoreanAnalyzer extends TestCase {
 	@Test
 	public void testKoreanAnalyzer() throws Exception {
 		
-		String input = "이 규정에 특별한 규정이 있는 것을 제외하고는 법ㆍ영ㆍ규칙 또는 문화체육관광부 감사규정이 정하는 바에 따른다.";
+		String input = "이 규정에 특별한 규정이 있는 것을 제외하고는 법ㆍ영ㆍ규칙 또는 문화체육관광부 감사규정이 에서 및 정하는 바에 따른다.";
 
-		KoreanAnalyzerSeunjeon a = new KoreanAnalyzerSeunjeon(true, true, true, true);
+		KoreanAnalyzerSeunjeon a = new KoreanAnalyzerSeunjeon(false, true, true, true);
 		
 		StringBuilder actual = new StringBuilder();
 		
