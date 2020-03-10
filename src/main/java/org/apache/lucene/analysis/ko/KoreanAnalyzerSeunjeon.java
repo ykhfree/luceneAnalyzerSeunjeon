@@ -17,11 +17,12 @@ package org.apache.lucene.analysis.ko;
  * limitations under the License.
  */
 
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.core.LowerCaseFilter;
 import org.apache.lucene.analysis.core.StopFilter;
-import org.apache.lucene.analysis.util.CharArraySet;
-import org.apache.lucene.analysis.util.StopwordAnalyzerBase;
+import org.apache.lucene.analysis.CharArraySet;
+import org.apache.lucene.analysis.StopwordAnalyzerBase;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -79,12 +80,8 @@ public class KoreanAnalyzerSeunjeon extends StopwordAnalyzerBase {
     final KoreanTokenizerSeunjeon src = new KoreanTokenizerSeunjeon(options);
     TokenStream tok = new LowerCaseFilter(src);
     tok = new StopFilter(tok, stopwords);
-    return new TokenStreamComponents(src, tok) {
-      @Override
-      protected void setReader(final Reader reader) throws IOException {
-        super.setReader(reader);
-      }
-    };
+
+    return new TokenStreamComponents(src, tok);
   }
 
 }

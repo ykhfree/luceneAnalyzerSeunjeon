@@ -12,7 +12,7 @@
         <file.encoding>UTF-8</file.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <lucene.version>5.0.0</lucene.version>
+        <lucene.version>8.4.1</lucene.version>
         <seunjeon>1.1.0</seunjeon>
         <scala>2.11.7</scala>
     </properties>
@@ -109,8 +109,8 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
